@@ -1,0 +1,22 @@
+{
+    "destination_list": [
+        {
+            "name": "Local",
+            "type": "scp",
+            "host": "localhost",
+            "port": 22,
+            "username": "ufaa",
+            "identity_file": "/home/ufaa/.ssh/id_rsa",
+            "remote_dir": "/home/ufaa"
+        },
+        {
+            "name": "Over Internet",
+            "type": "scp",
+            "host": "internet-address.com",
+            "port": 60000,
+            "username": "ufaa",
+            "identity_file": "/home/ufaa/.ssh/id_rsa",
+            "remote_dir": "/home/ufaa"
+        }
+    ]
+}
