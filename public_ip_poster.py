@@ -260,10 +260,9 @@ def main():
             logging.error("Could not retrieve public IP address from any service, exiting")
             os._exit(-1)
 
-        logging.debug(f"Attempting to save to cache file {args.cache_file}")
-        save_ip_list_to_cache(args.cache_file, public_ip_list)
 
-
+    logging.debug(f"Attempting to save to cache file {args.cache_file}")
+    save_ip_list_to_cache(args.cache_file, public_ip_list)
 
 
     # run the operations listed in the config file
