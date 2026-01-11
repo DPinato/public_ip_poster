@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/opt/public_ip_poster/bin/python3 /opt/public_ip_poster/public_ip_poster.py --verbose --log-file /var/log/public_ip_poster.log
+ExecStart=/opt/public_ip_poster/bin/python3 /opt/public_ip_poster/public_ip_poster.py --verbose --log-file /var/log/ufaa/public_ip_poster.log
 WorkingDirectory=/opt/public_ip_poster
 User=ufaa
 Group=ufaa
