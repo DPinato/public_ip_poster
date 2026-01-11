@@ -245,7 +245,12 @@ def main():
 
 
     # check if we have public IPs available in cache already, otherwise get fresh ones
-    public_ip_list = check_cache_staleness(args.cache_file, args.cache_ttl)
+    try:
+        public_ip_list = check_cache_staleness(args.cache_file, args.cache_ttl)
+    except Exception as e:
+        logging.error(f"Error checking cache staleness: {e}")
+        public_ip_list = None
+
     if public_ip_list and not args.ignore_cache:
         logging.info("Using cached public IP addresses")
         logging.debug(f"Got {len(public_ip_list)}")
